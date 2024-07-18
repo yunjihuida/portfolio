@@ -1,0 +1,2179 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SEOULMILK:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch:wght@400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.blind {
+  text-indent: -9999px;
+}
+
+header {
+  width: 80px;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+
+#dot {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  z-index: 1000;
+  transform: translatey(-50%);
+}
+
+#dot li {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin: 8px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
+  transition: box-shadow 0.3s ease;
+}
+
+#dot li a {
+  /*  background-color: rgba(255, 255, 255, 0.7); */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border-radius: 50%;
+  /*   background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.3); */
+  background-color: red;
+  text-indent: -999em;
+  cursor: pointer;
+  position: absolute;
+}
+
+#dot li.active {
+  box-shadow: 0 0 0 2px red;
+}
+
+#dot li:nth-child(1).active {
+  box-shadow: 0 0 0 2px rgba(2, 175, 205, 0.3);
+}
+
+#dot li:nth-child(2).active {
+  box-shadow: 0 0 0 2px rgba(0, 84, 99, 0.3);
+}
+
+#dot li:nth-child(3).active {
+  box-shadow: 0 0 0 2px rgba(3, 74, 152, 0.30);
+}
+
+#dot li:nth-child(4).active {
+  box-shadow: 0 0 0 2px #95BB9B;
+}
+
+#dot li:nth-child(5).active {
+  box-shadow: 0 0 0 2px #9F7C7C;
+}
+
+#dot li:nth-child(6).active {
+  box-shadow: 0 0 0 2px #5DA776;
+
+}
+
+#dot li:nth-child(7).active {
+  box-shadow: 0 0 0 2px #D9DC46;
+}
+
+#dot li:nth-child(8).active {
+  box-shadow: 0 0 0 2px #FF5C00;
+  opacity: 60%;
+}
+
+#dot li:nth-child(9).active {
+  box-shadow: 0 0 0 2px #98035C;
+  opacity: 60%;
+}
+
+#dot li:nth-child(1) a {
+  background-color: rgba(2, 175, 205, 0.3);
+}
+
+#dot li:nth-child(2) a {
+  background-color: rgba(0, 84, 99, 0.3);
+}
+
+#dot li:nth-child(3) a {
+  background-color: rgba(3, 74, 152, 0.30);
+}
+
+#dot li:nth-child(4) a {
+  background-color: #95BB9B;
+}
+
+#dot li:nth-child(5) a {
+  background-color: #9F7C7C;
+}
+
+#dot li:nth-child(6) a {
+  background-color: #5DA776;
+}
+
+#dot li:nth-child(7) a {
+  background-color: #D9DC46;
+
+}
+
+#dot li:nth-child(8) a {
+  background-color: #FF5C00;
+  opacity: 60%;
+}
+
+#dot li:nth-child(9) a {
+  background-color: #98035C;
+  opacity: 60%;
+}
+
+#dot li.active a {
+  transform: scale(0.4);
+}
+
+#dot li a em {
+  opacity: 0;
+  position: absolute;
+  right: 37px;
+  top: -7px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #ff0000;
+  padding: 8px 14px 5px 14px;
+  display: block;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+
+main>section {
+  width: 100%;
+  height: 100vh;
+  padding-top: 70px;
+}
+
+section:nth-child(4) section:nth-child(4),
+section:nth-child(5) {
+  padding-top: 0;
+}
+
+section:nth-child(2n) {}
+
+/* banner */
+.banner {
+  position: relative;
+}
+
+.banner h2 {
+  font-size: 200px;
+  font-family: Inria Serif;
+  font-style: italic;
+  font-weight: 300;
+  margin: 200px 0 0 300px;
+}
+
+.banner .point {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(2, 175, 205, 0.3);
+  position: absolute;
+  top: 350px;
+  left: calc(300px - 30px);
+  transform: translateY(-100%);
+  border-radius: 100px;
+  z-index: -1;
+}
+
+.banner .txt {
+  margin-left: 300px;
+  margin-top: 150px;
+  font-family: Inter;
+  font-size: 35px;
+}
+
+.banner p {
+  font-weight: 400;
+  line-height: 50px;
+}
+
+.banner b {
+  color: #757575;
+  font-weight: 700;
+}
+
+.svg-container {
+  position: absolute;
+  width: 98%;
+  top: 50%;
+  /* 화면 세로 중앙 정렬을 위해 top 50% 설정 */
+  left: 48%;
+  /* 화면 가로 중앙 정렬을 위해 left 50% 설정 */
+  transform: translate(-50%, -50%);
+  /* 화면 중앙 정렬 */
+  overflow: hidden;
+}
+
+#svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* intro */
+.intro {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100vh;
+  position: relative;
+}
+
+.intro .left {
+  width: 500px;
+  height: 847px;
+  margin-left: 172px;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.intro .left .subname {
+  color: #363BFF;
+  font-size: 100px;
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-weight: 400;
+  margin-top: 56px;
+  margin-bottom: 10px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.intro .left .point {
+  position: absolute;
+  margin-right: 350px;
+  margin-top: 330px;
+}
+
+
+.intro .left .me {
+  width: 321px;
+  height: 312px;
+}
+
+.intro .left .txt {
+  width: 416px;
+  height: 223px;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  align-items: flex-start;
+  text-align: left;
+
+}
+
+.intro .left .txt img {
+  position: absolute;
+  top: 200px;
+  left: 380px;
+}
+
+.intro .left .txt h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.intro .left .txt p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23px;
+  margin-top: 30px;
+  z-index: 1;
+}
+
+/* right */
+.intro .right {
+  width: 920px;
+  height: 721px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  margin-left: 150px;
+  margin-top: 30px;
+}
+
+.intro .right>div {
+  width: 50%;
+}
+
+.intro .right .txt {
+  width: 100%;
+  height: 200px;
+}
+
+.intro .right .txt_t {
+  margin-top: 80px;
+}
+
+.intro .right .txt h3 {
+  color: #2226FF;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.intro .right .txt p {
+  margin-top: 30px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 15px;
+
+}
+
+.intro .right .skill_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.intro .right .skill_wrap .skill {
+  width: 23%;
+}
+
+.intro .right .skill_wrap .skill>div {
+  width: 64px;
+  height: 64px;
+  padding-top: 23px;
+  padding-bottom: 22px;
+  padding-left: 17px;
+  padding-right: 14px;
+  margin-top: 10px;
+  background: rgba(34.35, 38.22, 255, 0.20);
+  border-radius: 100px;
+  overflow: hidden;
+  justify-content: flex-end;
+  align-items: center;
+  display: inline-flex
+}
+
+.html p {
+  margin-left: 10px;
+}
+
+.css p {
+  margin-left: 17px;
+}
+
+.js p {
+  margin-left: 25px;
+}
+
+.figma p {
+  margin-left: 8px;
+}
+
+.excel p {
+  margin-left: 10px;
+}
+
+/* contents */
+.contents {
+  /* 기존 스타일 유지 */
+  background-image: url(../img/contents_line.png);
+  background-position: right 28% top 40px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contents h2 {
+  font-size: 120px;
+  font-family: 'Inria Serif', serif;
+  font-weight: 400;
+  position: relative;
+  text-align: center;
+  /* 가운데 정렬 */
+  margin-top: 250px;
+  margin-right: 100px;
+}
+
+.contents h2::before {
+  content: '';
+  background: rgba(3, 74, 152, 0.30);
+  border-radius: 100px;
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  bottom: 310px;
+  left: 505px;
+  z-index: -1;
+  opacity: 0;
+  /* 나타나게 설정 */
+  animation: blink 3s linear infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 0;
+    /* 시작과 끝에서 투명 */
+  }
+
+  50% {
+    opacity: 1;
+    /* 중간에서 불투명 */
+  }
+}
+
+.contents ul.line {
+  display: flex;
+  justify-content: center;
+  /* 가운데 정렬 */
+  width: 1630px;
+  height: 290px;
+
+  margin-top: 200px;
+  list-style-type: none;
+  /* 목록 기호 제거 */
+  padding: 0;
+  /* 기본 패딩 제거 */
+}
+
+.contents ul.line li {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  padding: 10px 0;
+}
+
+.contents ul.line li::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+.contents ul.line li dl {
+  width: 100%;
+  border-top: 3px solid #ecebeb;
+  padding-top: 50px;
+}
+
+.contents ul.line li dl dt {
+  position: relative;
+  padding: 0px 10px;
+  font-size: 35px;
+  font-family: 'Inria Serif', serif;
+  font-weight: 400;
+}
+
+.contents ul.line li dl dd>p {
+  font-size: 30px;
+  font-family: 'Inria Serif', serif;
+  font-weight: 400;
+}
+
+.contents ul.line .num {
+  font-size: 20px;
+}
+
+.contents ul.line li dl dt::before {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: black;
+  position: absolute;
+  left: 0;
+  top: 12px;
+  z-index: -1;
+}
+
+.contents ul.line li:nth-child(1) dl dt::before {
+  background: #5DA776;
+  /* width: 230px; */
+  opacity: 30%;
+}
+
+.contents ul.line li:nth-child(2) dl dt::before {
+  background: #9F7C7C;
+  /* width: 210px; */
+  opacity: 30%;
+}
+
+.contents ul.line li:nth-child(3) dl dt::before {
+  background: #C1C1C1;
+  opacity: 30%;
+  /* width: 200px; */
+}
+
+.contents ul.line li:nth-child(4) dl dt::before {
+  background: #D9DC46;
+  opacity: 30%;
+  /* width: 190px; */
+}
+
+.contents ul.line li:nth-child(5) dl dt::before {
+  background: #FF5C00;
+  /* width: 230px; */
+  opacity: 30%;
+}
+
+.contents ul.line li dl dd {
+  display: flex;
+  line-height: 40px;
+}
+
+/* appsite */
+.appsite {
+  background-image: url(../img/app_bg.png);
+  background-position: center calc(50%);
+  padding-left: 200px;
+  padding-top: 100px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.appsite h2 {
+  font-size: 100px;
+  font-family: Inria Serif;
+  font-weight: 400;
+  position: relative;
+  margin-top: 280px;
+  margin-right: 900px;
+}
+
+.appsite h2::before {
+  content: '';
+  background: #5DA776;
+  opacity: 60%;
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 40px;
+  right: 460px;
+  z-index: -1;
+}
+
+/* app */
+.app {
+  background-image: url(../img/app_bg_0624.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.app .top {
+  width: 372px;
+  height: 132px;
+  line-height: 65px;
+  margin-left: 100px;
+}
+
+.app h2 {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.app p {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.left_txt {
+  /* background: #ccc; */
+  width: 400px;
+  height: 270px;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.left_txt ul.all {}
+
+
+/* .app .txt {
+  width: 400px;
+  height: 300px;
+  margin-left: 100px;
+  margin-top: 50px;
+} */
+
+.app .txt ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app .txt ul li {
+  flex: 1;
+  display: flex;
+}
+
+
+.app .txt ul li strong {
+  display: block;
+  width: 123px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.app .txt ul li span {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.app .txt ul li em {
+  display: block;
+  text-indent: -9999px;
+  width: 19px;
+  height: 19px;
+  background: red;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.app .txt ul li em:nth-child(1) {
+  background: #95BB9B;
+}
+
+.app .txt ul li em:nth-child(2) {
+  background: #318E50;
+}
+
+.app .txt ul li em:nth-child(3) {
+  background: #E52B3A;
+}
+
+.app .txt ul li em:nth-child(4) {
+  background: #000000;
+}
+
+.app .txt .button {
+  position: absolute;
+  margin-top: 80px;
+  background: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.app .txt .button:hover {
+  background: #cacaca;
+}
+
+.app .txt .button2:hover {
+  background: #cacaca;
+}
+
+.app .txt .button2 {
+  position: absolute;
+  margin-top: 20px;
+  background: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.app .txt .button a {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.app .bottom {
+  position: relative;
+  width: 342px;
+  height: 186px;
+  top: 180px;
+}
+
+.app .bottom>div {
+  position: absolute;
+  width: 35px;
+  border: 3px solid #000;
+  border-radius: 10px;
+  bottom: 220px;
+}
+
+.app .bottom p {
+  position: absolute;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.app img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  /* 이미지를 부모 요소의 너비에 맞게 조정 */
+  max-height: 100%;
+  /* 이미지를 부모 요소의 높이에 맞게 조정 */
+}
+
+/* app2 */
+.app2 {
+  background-image: url(../img/app2.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+
+/* website */
+.website {
+  background-image: url(../img/web_line.png);
+  background-position: center calc(50%);
+  padding-left: 100px;
+  padding-top: 100px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.website h2 {
+  font-size: 100px;
+  font-family: Inria Serif;
+  font-weight: 400;
+  position: relative;
+  margin-top: 300px;
+  margin-left: 400px;
+}
+
+.website h2::before {
+  content: '';
+  background: #9F7C7C;
+  opacity: 30%;
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 40px;
+  left: 450px;
+  z-index: -1;
+}
+
+/* webcoke */
+.webcoke {
+  background-image: url(../img/coke.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.webcoke .top {
+  width: 372px;
+  height: 132px;
+  line-height: 65px;
+  margin-left: 100px;
+}
+
+.webcoke h2 {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.webcoke p {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.webcoke .left_txt {
+  /* background: #ccc; */
+  width: 400px;
+  height: 270px;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.left_txt ul.all {}
+
+.webcoke ul.all li.line2 {
+  flex: 2;
+}
+
+.webcoke ul.all li.line2 span {
+  line-height: 25px;
+}
+
+/* .app .txt {
+  width: 400px;
+  height: 300px;
+  margin-left: 100px;
+  margin-top: 50px;
+} */
+
+.webcoke .txt ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.webcoke .txt ul li {
+  flex: 1;
+  display: flex;
+}
+
+
+.webcoke .txt ul li strong {
+  display: block;
+  width: 123px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.webcoke .txt ul li span {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.webcoke .txt ul li em {
+  display: block;
+  text-indent: -9999px;
+  width: 19px;
+  height: 19px;
+  background: red;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.webcoke .txt ul li em:nth-child(1) {
+  background: #C00B05;
+}
+
+.webcoke .txt ul li em:nth-child(2) {
+  background: #888888;
+}
+
+.webcoke .txt ul li em:nth-child(3) {
+  background: #E52B3A;
+}
+
+.webcoke .txt ul li em:nth-child(4) {
+  background: #B710C6;
+}
+
+.webcoke .txt .button {
+  position: absolute;
+  margin-top: 80px;
+  background: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.webcoke .txt .button:hover {
+  background: #cacaca;
+}
+
+.webcoke .txt .button2:hover {
+  background: #cacaca;
+}
+
+.webcoke .txt .button2 {
+  position: absolute;
+  margin-top: 20px;
+  background: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.webcoke .txt .button a {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.webcoke .bottom {
+  position: relative;
+  width: 342px;
+  height: 186px;
+  top: 180px;
+}
+
+.webcoke .bottom>div {
+  position: absolute;
+  width: 35px;
+  border: 3px solid #000;
+  border-radius: 10px;
+  bottom: 220px;
+}
+
+.webcoke .bottom p {
+  position: absolute;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+/* boseong */
+.boseong {
+  background-image: url(../img/boseong.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.boseong .top {
+  width: 372px;
+  height: 132px;
+  line-height: 65px;
+  margin-left: 100px;
+}
+
+.boseong h2 {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.boseong p {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.boseong .left_txt {
+  /* background: #ccc; */
+  width: 400px;
+  height: 270px;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.left_txt ul.all {}
+
+.boseong ul.all li.line2 {
+  flex: 2;
+}
+
+.boseong ul.all li.line2 span {
+  line-height: 25px;
+}
+
+/* .app .txt {
+  width: 400px;
+  height: 300px;
+  margin-left: 100px;
+  margin-top: 50px;
+} */
+
+.boseong .txt ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.boseong .txt ul li {
+  flex: 1;
+  display: flex;
+}
+
+
+.boseong .txt ul li strong {
+  display: block;
+  width: 123px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.boseong .txt ul li span {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.boseong .txt ul li em {
+  display: block;
+  text-indent: -9999px;
+  width: 19px;
+  height: 19px;
+  background: red;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.boseong .txt ul li em:nth-child(1) {
+  background: #30732F;
+}
+
+.boseong .txt ul li em:nth-child(2) {
+  background: #fff;
+}
+
+.boseong .txt ul li em:nth-child(3) {
+  background: #000000;
+}
+
+.boseong .txt ul li em:nth-child(4) {
+  background: #377A24;
+}
+
+.boseong .txt .button {
+  position: absolute;
+  margin-top: 80px;
+  background: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.boseong .txt .button:hover {
+  background: #cacaca;
+}
+
+.boseong .txt .button2:hover {
+  background: #cacaca;
+}
+
+.boseong .txt .button2 {
+  position: absolute;
+  margin-top: 20px;
+  background: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.boseong .txt .button a {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+
+.boseong .bottom {
+  position: relative;
+  width: 342px;
+  height: 186px;
+  top: 180px;
+}
+
+.boseong .bottom>div {
+  position: absolute;
+  width: 35px;
+  border: 3px solid #000;
+  border-radius: 10px;
+  bottom: 220px;
+}
+
+.boseong .bottom p {
+  position: absolute;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+/* adidas */
+.adidas {
+  background-image: url(../img/adidas.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.adidas .top {
+  width: 372px;
+  height: 132px;
+  line-height: 65px;
+  margin-left: 100px;
+}
+
+.adidas h2 {
+  width: 480px;
+  height: 70px;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.adidas p {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.left_txt {
+  /* background: #ccc; */
+  width: 400px;
+  height: 270px;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.left_txt ul.all {}
+
+
+/* .app .txt {
+  width: 400px;
+  height: 300px;
+  margin-left: 100px;
+  margin-top: 50px;
+} */
+.adidas ul.all li.line2 {
+  flex: 2;
+}
+
+.adidas ul.all li.line2 span {
+  line-height: 25px;
+}
+
+.adidas .txt ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.adidas .txt ul li {
+  flex: 1;
+  display: flex;
+}
+
+
+.adidas .txt ul li strong {
+  display: block;
+  width: 123px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.adidas .txt ul li span {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.adidas .txt ul li em {
+  display: block;
+  text-indent: -9999px;
+  width: 19px;
+  height: 19px;
+  background: red;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.adidas .txt ul li em:nth-child(1) {
+  background: #2A92C9;
+}
+
+.adidas .txt ul li em:nth-child(2) {
+  background: #646363;
+}
+
+.adidas .txt ul li em:nth-child(3) {
+  background: #8FB4D4;
+}
+
+.adidas .txt ul li em:nth-child(4) {
+  background: #BEB6B8;
+}
+
+
+.adidas .txt .button {
+  position: absolute;
+  margin-top: 80px;
+  background: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.adidas .txt .button:hover {
+  background: #cacaca;
+}
+
+.adidas .txt .button2:hover {
+  background: #cacaca;
+}
+
+.adidas .txt .button2 {
+  position: absolute;
+  margin-top: 20px;
+  background: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.adidas .txt .button a {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.adidas .bottom {
+  position: relative;
+  width: 342px;
+  height: 186px;
+  top: 180px;
+}
+
+.adidas .bottom>div {
+  position: absolute;
+  width: 35px;
+  border: 3px solid #000;
+  border-radius: 10px;
+  bottom: 220px;
+}
+
+.adidas .bottom p {
+  position: absolute;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+
+.adidas img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  /* 이미지를 부모 요소의 너비에 맞게 조정 */
+  max-height: 100%;
+  /* 이미지를 부모 요소의 높이에 맞게 조정 */
+}
+
+/* adidas2 */
+.adidas2 {
+  background-image: url(../img/adidas2.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.adidas2 .top {
+  width: 372px;
+  height: 132px;
+  line-height: 65px;
+  margin-left: 1216px;
+  margin-top: 100px;
+}
+
+.adidas2 h2 {
+  width: 480px;
+  height: 70px;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.adidas2 p {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.adidas2 ul.all li.line2 {
+  flex: 2;
+}
+
+.adidas2 ul.all li.line2 span {
+  line-height: 25px;
+}
+
+.adidas2 div.txt.left_txt {
+  margin-left: 1216px;
+}
+
+.left_txt ul.all {}
+
+
+/* .app .txt {
+width: 400px;
+height: 300px;
+margin-left: 100px;
+margin-top: 50px;
+} */
+
+.adidas2 .txt ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.adidas2 .txt ul li {
+  flex: 1;
+  display: flex;
+}
+
+
+.adidas2 .txt ul li strong {
+  display: block;
+  width: 123px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.adidas2 .txt ul li span {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.adidas2 .txt ul li em {
+  display: block;
+  text-indent: -9999px;
+  width: 19px;
+  height: 19px;
+  background: red;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.adidas2 .txt ul li em:nth-child(1) {
+  background: #2A92C9;
+}
+
+.adidas2 .txt ul li em:nth-child(2) {
+  background: #646363;
+}
+
+.adidas2 .txt ul li em:nth-child(3) {
+  background: #8FB4D4;
+}
+
+.adidas2 .txt ul li em:nth-child(4) {
+  background: #BEB6B8;
+}
+
+
+.adidas2 .txt .button {
+  position: absolute;
+  margin-top: 100px;
+  background: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.adidas2 .txt .button:hover {
+  background: #cacaca;
+}
+
+.adidas2 .txt .button2:hover {
+  background: #cacaca;
+}
+
+.adidas2 .txt .button2 {
+  position: absolute;
+  margin-top: 40px;
+  background: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+.adidas2 .txt .button a {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.adidas2 .bottom {
+  position: relative;
+  width: 342px;
+  height: 186px;
+  top: 180px;
+}
+
+.adidas2 .bottom>div {
+  position: absolute;
+  width: 35px;
+  border: 3px solid #000;
+  border-radius: 10px;
+  bottom: 220px;
+}
+
+.adidas2 .bottom p {
+  position: absolute;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+
+.adidas2 img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  /* 이미지를 부모 요소의 너비에 맞게 조정 */
+  max-height: 100%;
+  /* 이미지를 부모 요소의 높이에 맞게 조정 */
+}
+
+/* codingsite */
+.codingsite {
+  background-image: url(../img/codingsite.png);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.codingsite .top {
+  position: absolute;
+  left: 100px;
+  top: 0;
+  /*   width: 372px; */
+  height: 132px;
+  line-height: 65px;
+  /*   margin-left: 100px; */
+}
+
+.codingsite .top h2 {
+  margin-top: 60px;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.codingsite .top p {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.codingsite .txt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.codingsite .txt ul {
+  width: 60%;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.codingsite .txt ul li {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.codingsite .txt ul li:nth-child(1) {
+  z-index: 5;
+  /* Adjust z-index for the first image */
+}
+
+.codingsite .txt ul li:nth-child(2) {
+  z-index: 4;
+  /* Adjust z-index for the second image */
+}
+
+.codingsite .txt ul li:nth-child(3) {
+  z-index: 3;
+  /* Adjust z-index for the third image */
+}
+
+.codingsite .txt ul li:nth-child(4) {
+  z-index: 2;
+  /* Adjust z-index for the fourth image */
+}
+
+.codingsite .txt ul li:nth-child(5) {
+  z-index: 1;
+  /* Adjust z-index for the fifth image */
+}
+
+.codingsite .txt ul li:hover {
+  transform: translateY(-150px);
+}
+
+.codingsite .txt ul li a {}
+
+.codingsite .txt ul li a img {
+  width: 500px;
+  margin-left: -230px;
+  display: block;
+  height: auto;
+}
+
+/* animation */
+.animation {
+  background-image: url(../img/ani_line.png);
+  background-position: center calc(50%);
+  padding-left: 100px;
+  padding-top: 100px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.animation h2 {
+  font-size: 100px;
+  font-family: Inria Serif;
+  font-weight: 400;
+  position: relative;
+  margin-top: 300px;
+  margin-left: 550px;
+}
+
+.animation h2::before {
+  content: '';
+  background: #D9DC46;
+  opacity: 30%;
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 30px;
+  right: 300px;
+  z-index: -1;
+}
+
+/* game */
+canvas {
+  border: 2px solid black;
+  width: 80%;
+  /* 전체 너비의 80%로 설정 */
+  max-width: 1920px;
+  /* 최대 너비를 1920px로 제한 */
+  height: auto;
+  /* 가로 비율 유지 */
+}
+
+/* warthecrime */
+/* General styling */
+/* Ensure .warthecrime is the relative positioning container */
+.warthecrime {
+  position: relative;
+  background-image: url(../img/warthecrime.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.warthecrime .top {
+  width: 500px;
+  height: 132px;
+  line-height: 65px;
+  margin-left: 100px;
+}
+
+.warthecrime h2 {
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.warthecrime p {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.warthecrime .left_txt {
+  width: 400px;
+  height: 270px;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.left_txt ul.all {}
+
+.warthecrime ul.all li.line2 {
+  flex: 2;
+}
+
+.warthecrime ul.all li.line2 span {
+  line-height: 25px;
+}
+
+.warthecrime .txt ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.warthecrime .txt ul li {
+  flex: 1;
+  display: flex;
+}
+
+.warthecrime .txt ul li strong {
+  display: block;
+  width: 123px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.warthecrime .txt ul li span {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.warthecrime .txt ul li em {
+  display: block;
+  text-indent: -9999px;
+  width: 19px;
+  height: 19px;
+  background: red;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.warthecrime .txt ul li em:nth-child(1) {
+  background: #000000;
+}
+
+.warthecrime .txt ul li em:nth-child(2) {
+  background: #163982;
+}
+
+.warthecrime .txt ul li em:nth-child(3) {
+  background: #00AEEF;
+}
+
+.warthecrime .txt ul li em:nth-child(4) {
+  background: #E31B25;
+}
+
+.warthecrime .txt .button {
+  position: absolute;
+  margin-top: 20px;
+  background: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.warthecrime .txt .button:hover {
+  background: #cacaca;
+}
+
+.warthecrime .txt .button a {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.warthecrime .bottom {
+  position: relative;
+  width: 342px;
+  height: 186px;
+  top: 150px;
+}
+
+.warthecrime .bottom>div {
+  position: absolute;
+  width: 35px;
+  border: 3px solid #000;
+  border-radius: 10px;
+  bottom: 220px;
+}
+
+.warthecrime .bottom p {
+  position: absolute;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+/* Keyframes for bullet hit effect */
+@keyframes bullet-hit {
+  0% {
+    opacity: 0;
+  }
+
+  25%,
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.warthecrime img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  opacity: 0;
+  /* Ensure images are initially hidden */
+}
+
+
+
+.warthecrime img.bro1 {
+  animation: bullet-hit 5s infinite;
+  animation-delay: 1s;
+  top: 500px;
+  left: 1000px;
+}
+
+.warthecrime img.bro2 {
+  animation: bullet-hit 5s infinite;
+  animation-delay: 2s;
+  top: 150px;
+  left: 800px;
+}
+
+.warthecrime img.bro3 {
+  animation: bullet-hit 5s infinite;
+  animation-delay: 3s;
+  top: 250px;
+  left: 1100px;
+}
+
+.warthecrime img.bro4 {
+  animation: bullet-hit 5s infinite;
+  animation-delay: 4s;
+  top: 600px;
+  left: 1300px;
+}
+
+.warthecrime img.bro5 {
+  animation: bullet-hit 5s infinite;
+  animation-delay: 5s;
+  top: 250px;
+  left: 1500px;
+}
+
+.warthecrime img.bro6 {
+  animation: bullet-hit 5s infinite;
+  animation-delay: 0s;
+  top: 450px;
+  left: 1550px;
+}
+
+
+
+/*team  */
+.team {
+  background-image: url(../img/team_line.png);
+  background-position: center calc(60%);
+  margin-left: 0;
+  margin-top: 100px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.team h2 {
+  font-size: 100px;
+  font-family: Inria Serif;
+  font-weight: 400;
+  position: relative;
+  margin-top: 320px;
+  margin-left: 700px;
+}
+
+.team h2::before {
+  content: '';
+  background: #95BB9B;
+  opacity: 40%;
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 60px;
+  left: 300px;
+  z-index: -1;
+}
+
+/* teamsite */
+.teamsite {
+  position: relative;
+  background-image: url(../img/teamsite.png);
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}
+
+.teamsite .top {
+  width: 400px;
+  height: 132px;
+  line-height: 65px;
+  margin-left: 100px;
+  margin-top: 70px;
+}
+
+.teamsite h2 {
+  width: 480px;
+  height: 70px;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.teamsite p {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.left_txt {
+  /* background: #ccc; */
+  width: 400px;
+  height: 270px;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.left_txt ul.all {}
+
+
+/* .app .txt {
+  width: 400px;
+  height: 300px;
+  margin-left: 100px;
+  margin-top: 50px;
+} */
+
+.teamsite .txt ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.teamsite .txt ul li {
+  flex: 1;
+  display: flex;
+}
+
+.teamsite ul.all li.line2 {
+  flex: 2;
+}
+
+.teamsite ul.all li.line2 span {
+  line-height: 25px;
+}
+
+.teamsite .txt ul li strong {
+  display: block;
+  width: 123px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.teamsite .txt ul li span {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.teamsite .txt ul li em {
+  display: block;
+  text-indent: -9999px;
+  width: 19px;
+  height: 19px;
+  background: red;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.teamsite .txt ul li em:nth-child(1) {
+  background: #BC130D;
+}
+
+.teamsite .txt ul li em:nth-child(2) {
+  background: #090908;
+}
+
+.teamsite .txt ul li em:nth-child(3) {
+  background: #434040;
+}
+
+.teamsite .txt ul li em:nth-child(4) {
+  background: #FFFFFF;
+}
+
+
+.teamsite .txt .button {
+  position: absolute;
+  margin-top: 80px;
+  background: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.teamsite .txt .button:hover {
+  background: #cacaca;
+}
+
+.teamsite .txt .button2:hover {
+  background: #cacaca;
+}
+
+.teamsite .txt .button2 {
+  position: absolute;
+  margin-top: 20px;
+  background: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.teamsite .txt .button a {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.teamsite .bottom {
+  position: relative;
+  width: 342px;
+  height: 186px;
+  top: 180px;
+}
+
+.teamsite .bottom>div {
+  position: absolute;
+  width: 35px;
+  border: 3px solid #000;
+  border-radius: 10px;
+  bottom: 220px;
+}
+
+.teamsite .bottom p {
+  position: absolute;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+
+.teamsite img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  /* 이미지를 부모 요소의 너비에 맞게 조정 */
+  max-height: 100%;
+  /* 이미지를 부모 요소의 높이에 맞게 조정 */
+}
+
+
+.tiger {
+  position: absolute;
+  right: 310px;
+  bottom: 420px;
+  filter: grayscale(100%);
+  /* 이미지를 흑백으로 변경 */
+  animation: jump 4s ease-in-out infinite;
+
+  /* 애니메이션 적용 */
+}
+
+@keyframes jump {
+  0% {
+    animation-delay: 2s;
+    transform: translateX(0) translateY(0);
+    /* 처음 위치: 변화 없음 */
+    opacity: 1;
+    /* 처음 opacity는 1 (투명도 없음) */
+  }
+
+  100% {
+    transform: translateX(650px) translateY(-100px);
+    /* 중간 위치: 오른쪽으로 200px 이동하면서 위로 100px 이동 */
+    opacity: 1;
+    /* 중간 opacity는 1 (투명도 없음) */
+  }
+}
+
+
+
+
+/* poster */
+.poster {
+  background-image: url(../img/poster_line.png);
+  background-position: center calc(20%);
+  margin-top: 100px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.poster h2 {
+  font-size: 100px;
+  font-family: Inria Serif;
+  font-weight: 400;
+  position: relative;
+  margin-top: 680px;
+  margin-left: 0;
+}
+
+.poster h2::before {
+  content: '';
+  background: #FF5C00;
+  opacity: 30%;
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 30px;
+  right: 600px;
+  z-index: -1;
+}
+
+.poster1 {
+  background-image: url(../img/poster1.png);
+}
+
+.poster2 {
+  background-image: url(../img/poster1-1.png);
+}
+
+.last {
+  background-image: url(../img/last_line.png);
+  background-position: center calc(50% - 50px);
+  margin-left: 0;
+  margin-top: 100px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.last h2 {
+  font-size: 100px;
+  font-family: Inria Serif;
+  font-weight: 400;
+  position: relative;
+  margin-top: 80px;
+  margin-left: 600px;
+  animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.2), 0 0 40px rgba(255, 255, 255, 0.1);
+  }
+
+  50% {
+    opacity: 0.5;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.6), 0 0 50px rgba(255, 255, 255, 0.4);
+  }
+
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.2), 0 0 40px rgba(255, 255, 255, 0.1);
+  }
+}
+
+
+.last h2::before {
+  content: '';
+  background: #98035C;
+  opacity: 0.3;
+  /* '30%'는 잘못된 값, '0.3'으로 수정 */
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 130px;
+  left: -40px;
+  z-index: -1;
+}
+
+.last .text {
+  margin-top: 150px;
+}
+
+.email-link {
+  display: inline-block;
+  font-size: 24px;
+  background-color: #98035C;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-top: 300px;
+  margin-left: 800px;
+
+}
+
+.last .text p {
+  position: absolute;
+  font-size: 25px;
+  left: 1300px;
+  margin-top: 315px;
+}
+
+.last .text .ma i {}
+
+.email-link:hover {
+  background-color: #6B0244;
+}
